@@ -1,0 +1,39 @@
+<script type="text/javascript">
+  //기본 객체
+  var students={'name' : "pch", 'age' : 26, 'sex' : "male" };
+  alert(students['name']);
+  alert(students['age']);
+  alert(students['sex']);
+
+  //또 다른 객체 {}
+  var teacher={};
+  teacher['name']="cyj";
+  teacher['age']=26;
+  teacher['sex']="female";
+  for(key in teacher){
+    document.write(key+" : " + teacher[key]+"<br>");
+  }
+
+  //또 다른 객체 객체.key
+  document.write(students.name+"<br>");
+  document.write(students.age+"<br>");
+  document.write(students.sex+"<br>");
+
+  //*중첩 객체, 객체내 함수
+  var manager={
+    'name'     : "jmw",
+    'age'      : 26,
+    'position' : {'univ' : "dongguk", 'grade' : 4 },
+    'show'     : function(){//객체내 함수
+      document.write("name  : "+this.name+"<br>");
+      document.write("age   : "+this.age+"<br>");
+      document.write("univ  : "+this.position.univ+"<br>");
+      document.write("grade : "+this.position.grade+"<br>");
+    }
+  };
+  manager.show();
+
+
+
+
+</script>
