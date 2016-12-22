@@ -1,5 +1,6 @@
 <script type="text/javascript">
-  var MYAPP={};
+
+  (function(){var MYAPP={};
   MYAPP.cal={
     'left':null,
     'right':null
@@ -15,5 +16,5 @@
     return MYAPP.cal.left+MYAPP.coor.right;
   }
 
-  document.write(sum());
+  document.write(sum());}())
 </script>
