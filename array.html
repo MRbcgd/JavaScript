@@ -1,34 +1,36 @@
 <script type="text/javascript">
-  //push 뒤에 하나 추가
-  var array=['a','b','c'];
-  for (var i = 0; i < array.length; i++) {
-    alert(array[i]);
-  }
-  array.push('d');
-  for (var i = 0; i < array.length; i++) {
-    alert(array[i]);
-  }
-
-
-  //concat 뒤에 복수 추가
-  array=array.concat(['e','f']);
+  var array=['a','b','c','d'];
   for (var i = 0; i < array.length; i++) {
     document.write(array[i]+" ");
   }
   document.write("<br>");
 
-  //unshift 앞에 하나 또는 복수 추가
-  array.unshift('0','0');
+  //shift 맨 앞 하나 제거
+  array.shift();
   for (var i = 0; i < array.length; i++) {
     document.write(array[i]+" ");
   }
   document.write("<br>");
 
-  //splice 원하는 위치에 추가
-  //1번쨰 원소는 앞에서부터 몇번째인지, 2번째 원소는 지우고 싶은 수, 3번째 원소는 넣고싶은 값
-  array.splice(1,1,'1');
+  //pop 맨 뒤 하나 제거
+  array.pop();
   for (var i = 0; i < array.length; i++) {
     document.write(array[i]+" ");
   }
   document.write("<br>");
+
+  //역순 정렬
+  array.reverse();
+  for (var i = 0; i < array.length; i++) {
+    document.write(array[i]+" ");
+  }
+  document.write("<br>");
+
+  //정순 정렬
+  array.sort();
+  for (var i = 0; i < array.length; i++) {
+    document.write(array[i]+" ");
+  }
+  document.write("<br>");
+
 </script>
