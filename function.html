@@ -1,15 +1,13 @@
 <script type="text/javascript">
-  //함수의 리턴 값인 함수
-  function cal(mode){
-    var func = {
-      'plus'  : function(left,right){return left+right},
-      'minus' : function(left,right){return left-right}
-    }
-    return func[mode];
-  }
+  //배열의 값인 함수
+  var array = [
+    function(input){return input+1},
+    function(input){return input+2},
+    function(input){return input+3}
+  ];
 
-  var left=10;
-  var right=10;
-  document.write(cal('plus')(left,right)+"<br>");
-  document.write(cal('minus')(left,right));
+  var input=0;
+  for (var i = 0; i < array.length; i++) {
+    document.write(array[i](input)+"<br>");
+  }
 </script>
