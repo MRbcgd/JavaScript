@@ -1,0 +1,16 @@
+<script type="text/javascript">
+  //값으로서의 함수
+  function cal(func,num){
+    return func(num);//인자로 받아온 함수명을 사용할 수 있음
+  }
+  function increase(num){
+    return num+1;
+  }
+  function decrease(num){
+    return num-1;
+  }
+
+  var num=10;
+  document.write(num+"<br>");
+  document.write(cal(increase,10))
+</script>
