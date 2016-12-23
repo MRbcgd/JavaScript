@@ -1,16 +1,15 @@
 <script type="text/javascript">
-  //값으로서의 함수
-  function cal(func,num){
-    return func(num);//인자로 받아온 함수명을 사용할 수 있음
-  }
-  function increase(num){
-    return num+1;
-  }
-  function decrease(num){
-    return num-1;
+  //함수의 리턴 값인 함수
+  function cal(mode){
+    var func = {
+      'plus'  : function(left,right){return left+right},
+      'minus' : function(left,right){return left-right}
+    }
+    return func[mode];
   }
 
-  var num=10;
-  document.write(num+"<br>");
-  document.write(cal(increase,10))
+  var left=10;
+  var right=10;
+  document.write(cal('plus')(left,right)+"<br>");
+  document.write(cal('minus')(left,right));
 </script>
