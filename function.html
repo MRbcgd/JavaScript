@@ -1,12 +1,18 @@
 <script type="text/javascript">
-//함수의 인자 arguments
-  function sum(){
-    var i,_sum=0;
-    for (var i = 0; i < arguments.length; i++) {
-      document.write(arguments[i]+"<br>");
-      _sum+=arguments[i];
-    }
-    return _sum;
+//arguments length
+//.length         -> 함수의 argumnets 길이
+//arguments.length-> 실제 arguments 길이
+  function zero(){
+    console.log('zero.length',zero.length,'arguments.length',arguments.length);
   }
-  document.write(sum(1,2,3,4));
+  function one(arg1){
+    console.log('one.length',one.length,'arguments.length',arguments.length);
+  }
+  function two(arg1,arg2){
+    console.log('two.length',two.length,'arguments.length',arguments.length);
+  }
+
+  zero();
+  one('arg1','arg2');
+  two('arg1');
 </script>
