@@ -1,0 +1,12 @@
+<script type="text/javascript">
+//new 생성자
+  function Person(name){
+    this.name=name;
+    this.introduce=function(){
+      return 'My name is '+this.name;
+    }
+  }
+
+  var p1=new Person('pch');
+  document.write(p1.introduce());
+</script>
