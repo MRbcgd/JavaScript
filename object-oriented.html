@@ -1,12 +1,17 @@
 <script type="text/javascript">
-//new 생성자
+//상속
   function Person(name){
     this.name=name;
-    this.introduce=function(){
-      return 'My name is '+this.name;
-    }
+  }
+  Person.prototype.name=null;
+  Person.prototype.introduce=function(){
+    return 'My name is' + this.name
   }
 
-  var p1=new Person('pch');
+  function Programmer(name){
+    this.name=name;
+  }
+  Programmer.prototype=new Person();
+  var p1=Programmer('pch');
   document.write(p1.introduce());
 </script>
