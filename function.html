@@ -1,13 +1,25 @@
 <script type="text/javascript">
-  //배열의 값인 함수
-  var array = [
-    function(input){return input+1},
-    function(input){return input+2},
-    function(input){return input+3}
-  ];
-
-  var input=0;
-  for (var i = 0; i < array.length; i++) {
-    document.write(array[i](input)+"<br>");
+  //클로저 private variable
+  function movie(title){
+    return {
+      get_title : function(){
+        return title;
+      },
+      set_title : function(_title){
+        title=_title;
+      }
+    }
   }
+
+  ghost = movie("ghost");
+  gun = movie("gun");
+
+  alert(ghost.get_title());
+  alert(gun.get_title());
+
+  ghost.set_title("g h o s t");
+  gun.set_title("g u n");
+
+  alert(ghost.get_title());
+  alert(gun.get_title());
 </script>
