@@ -1,25 +1,15 @@
 <script type="text/javascript">
-  //클로저 private variable
-  function movie(title){
-    return {
-      get_title : function(){
-        return title;
-      },
-      set_title : function(_title){
-        title=_title;
-      }
+//자주 사용되는 클로저
+var array=[];
+for (var i = 0; i < 3; i++) {
+  array[i]=function(id){
+    return function(){
+      return id;
     }
-  }
+  }(i);
+}
 
-  ghost = movie("ghost");
-  gun = movie("gun");
-
-  alert(ghost.get_title());
-  alert(gun.get_title());
-
-  ghost.set_title("g h o s t");
-  gun.set_title("g u n");
-
-  alert(ghost.get_title());
-  alert(gun.get_title());
+for(var index in array){
+  document.write(array[index]()+"<br>")
+}
 </script>
