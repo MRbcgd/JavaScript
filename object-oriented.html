@@ -1,10 +1,12 @@
 <script type="text/javascript">
-//표준 내장객체의 확장
-Array.prototype.rand=function(){
-  var index=Math.floor(this.length*Math.random());
-  return this[index];
-}
+//**참조
+var a={id:1};
+b=a;
+console.log('1.',b.id);//b는 a와 같은 객체를 가리킴
 
-var arr=new Array('a','b','c','d','e');
-document.write((arr.rand()));
+b.id=2;//b와 a가 같이 가리키는 객체의 id를 변환 1->2
+console.log('2.',a.id);
+
+b={id:3};//b는 새로운 객체를 가리킴. 그 객체의 id는 3
+console.log('3.',a.id);
 </script>
